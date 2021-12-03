@@ -8,6 +8,9 @@
 ### About me
 I'm a {backend, frontend and mobile} developer and web designer.
 I am currently a student of programming, I am interested in learning more and improving my knowledge in the area.
+<br>
+    <img src="https://github-readme-stats.vercel.app/api?username=devPhytols&show_icons=true&theme=dark" alt="Phytols" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devPhytols&theme=dark" alt="Phytols" />
 
 <hr>
 
