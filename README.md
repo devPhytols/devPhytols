@@ -10,8 +10,8 @@ I'm a {backend, frontend and mobile} developer and web designer.
 I am currently a student of programming, I am interested in learning more and improving my knowledge in the area.
 
 <hr>
-zzz
-- [Website](https://phytols.tech/) 💻 - building...
+
+- [Website](https://phytols.tech/) 💻 - building...<br>
 - [Discord Bot](https://kosamebot.club/) 💻
 
 <hr>
