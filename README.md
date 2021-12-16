@@ -4,7 +4,7 @@
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=)](#)
 
 ### About me
-I'm a {backend, frontend and mobile} developer and web designer.
+I'm a {backend, frontend} developer and web designer.
 I am currently a student of programming, I am interested in learning more and improving my knowledge in the area.
 <br>
     <img src="https://github-readme-stats.vercel.app/api?username=devPhytols&show_icons=true&theme=dark" alt="Phytols" />
