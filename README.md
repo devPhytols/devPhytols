@@ -13,7 +13,8 @@ I am currently a student of programming, I am interested in learning more and im
 <hr>
 
 - [Website](https://phytols.tech/) 💻 - building...<br>
-- [Discord Bot](https://kosamebot.club/) 💻
+- [Discord Bot](https://kosamebot.club/) 💻<br>
+- [DisFetch](https://disfetch.xyz/) 🐱‍🏍
 
 <hr>
  
