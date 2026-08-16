@@ -25,9 +25,9 @@ jobs:
         run: |
           mkdir -p dist
           npm install pacman-contribution-graph
-          node -e "
-          const { ArcadeRenderer } = require('pacman-contribution-graph');
-          const fs = require('fs');
+          cat > generate.mjs << 'EOF'
+          import { ArcadeRenderer } from 'pacman-contribution-graph';
+          import { writeFileSync } from 'fs';
 
           function generate(game, theme, filename) {
             return new Promise((resolve) => {
@@ -37,7 +37,7 @@ jobs:
                 platform: 'github',
                 gameTheme: theme,
                 svgCallback: (svg) => {
-                  fs.writeFileSync('dist/' + filename, svg);
+                  writeFileSync('dist/' + filename, svg);
                   resolve();
                 },
                 gameOverCallback: resolve,
@@ -46,13 +46,12 @@ jobs:
             });
           }
 
-          (async () => {
-            await generate('bomberman', 'github-dark', 'bomberman-dark.svg');
-            await generate('bomberman', 'github', 'bomberman.svg');
-            await generate('pacman', 'github-dark', 'pacman-dark.svg');
-            await generate('pacman', 'github', 'pacman.svg');
-          })();
-          "
+          await generate('bomberman', 'github-dark', 'bomberman-dark.svg');
+          await generate('bomberman', 'github', 'bomberman.svg');
+          await generate('pacman', 'github-dark', 'pacman-dark.svg');
+          await generate('pacman', 'github', 'pacman.svg');
+          EOF
+          node generate.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
