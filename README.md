@@ -80,9 +80,9 @@
   </a>
   <br><br>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Snake contribution animation" src="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-contribution-grid-snake.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/bomberman-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/bomberman.svg">
+    <img alt="Bomberman Contribution Graph" src="https://raw.githubusercontent.com/devPhytols/devPhytols/output/bomberman-dark.svg" width="100%">
   </picture>
 </div>
 
