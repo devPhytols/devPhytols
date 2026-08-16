@@ -23,8 +23,8 @@ jobs:
 
       - name: Generate Bomberman contribution graph
         run: |
-          npm install -g pacman-contribution-graph
           mkdir -p dist
+          npm install pacman-contribution-graph
           node -e "
           const { ArcadeRenderer } = require('pacman-contribution-graph');
           const fs = require('fs');
