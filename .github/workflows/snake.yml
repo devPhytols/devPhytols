@@ -15,10 +15,19 @@ jobs:
       contents: write
 
     steps:
-      - uses: abozanona/pacman-contribution-graph@main
+      - uses: abozanona/pacman-contribution-graph@master
         with:
           github_user_name: devPhytols
-          games: 'bomberman,pacman'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: devPhytols
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
