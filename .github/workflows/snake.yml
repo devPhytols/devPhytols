@@ -29,15 +29,21 @@ jobs:
           import { ArcadeRenderer } from 'pacman-contribution-graph';
           import { writeFileSync } from 'fs';
 
+          const token = process.env.GITHUB_TOKEN;
+
           function generate(game, theme, filename) {
-            return new Promise((resolve) => {
+            return new Promise((resolve, reject) => {
               const renderer = new ArcadeRenderer({
                 game,
                 username: 'devPhytols',
                 platform: 'github',
                 gameTheme: theme,
+                githubSettings: {
+                  accessToken: token,
+                },
                 svgCallback: (svg) => {
                   writeFileSync('dist/' + filename, svg);
+                  console.log('Generated: ' + filename);
                   resolve();
                 },
                 gameOverCallback: resolve,
