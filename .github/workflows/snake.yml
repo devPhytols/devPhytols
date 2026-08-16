@@ -15,19 +15,46 @@ jobs:
       contents: write
 
     steps:
-      - uses: abozanona/pacman-contribution-graph@master
-        with:
-          github_user_name: devPhytols
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
 
-      - uses: Platane/snk@v3
+      - uses: actions/setup-node@v4
         with:
-          github_user_name: devPhytols
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          node-version: '20'
+
+      - name: Generate Bomberman contribution graph
+        run: |
+          npm install -g pacman-contribution-graph
+          mkdir -p dist
+          node -e "
+          const { ArcadeRenderer } = require('pacman-contribution-graph');
+          const fs = require('fs');
+
+          function generate(game, theme, filename) {
+            return new Promise((resolve) => {
+              const renderer = new ArcadeRenderer({
+                game,
+                username: 'devPhytols',
+                platform: 'github',
+                gameTheme: theme,
+                svgCallback: (svg) => {
+                  fs.writeFileSync('dist/' + filename, svg);
+                  resolve();
+                },
+                gameOverCallback: resolve,
+              });
+              renderer.start();
+            });
+          }
+
+          (async () => {
+            await generate('bomberman', 'github-dark', 'bomberman-dark.svg');
+            await generate('bomberman', 'github', 'bomberman.svg');
+            await generate('pacman', 'github-dark', 'pacman-dark.svg');
+            await generate('pacman', 'github', 'pacman.svg');
+          })();
+          "
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
@@ -35,5 +62,6 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
