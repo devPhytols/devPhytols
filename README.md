@@ -25,7 +25,7 @@
 
 <div align="justify">
   <h3>Hey there! I’m Fernando Oliveira (phytols)</h3>
-  I'm a <strong>Fullstack Developer</strong> and <strong>Web Designer</strong> passionate about building scalable backends, engaging Discord ecosystems, and modern web applications. Creator of <strong>Kosame</strong>, an economy bot serving over 1 million users for more than 5 years.
+  I'm a <strong>Fullstack Developer</strong> and <strong>Web Designer</strong>. I've been programming since I was <strong>15 years old</strong>, bringing over <strong>10 years of learning and experience</strong> building scalable backends, modern web applications, and rich Discord ecosystems. Creator of <strong>Kosame</strong>, an economy bot serving over 1 million users for more than 5 years.
   <br><br>
   
   <hr style="border: 1px solid #333; margin-top: 10px; margin-bottom: 10px;">
@@ -80,9 +80,9 @@
   </a>
   <br><br>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-snake.svg">
-    <img alt="GitHub Snake contribution animation" src="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-snake-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub Snake contribution animation" src="https://raw.githubusercontent.com/devPhytols/devPhytols/output/github-contribution-grid-snake.svg" width="100%">
   </picture>
 </div>
 
